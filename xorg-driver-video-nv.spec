@@ -1,5 +1,5 @@
-Summary:	NVidia video adapters driver
-Summary(pl):	Sterownik do kart graficznych NVidia
+Summary:	X.org video driver for NVIDIA video adapters
+Summary(pl):	Sterownik obrazu X.org dla kart graficznych NVIDIA
 Name:		xorg-driver-video-nv
 Version:	1.0.1.1
 Release:	0.1
@@ -18,10 +18,22 @@ BuildRequires:	xorg-xserver-server-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-NVidia video adapters driver.
+X.org video driver for NVIDIA video adapters. It supports PCI and AGP
+video cards based on the following chips: RIVA 128 (NV3), RIVA TNT
+(NV4), GeForce 256, QUADRO (NV10), GeForce2, QUADRO2 (NV11, NV15),
+GeForce3, QUADRO DCC (NV20), nForce, nForce2 (NV1A, NV1F), GeForce4,
+QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO FX (NV30, NV31,
+NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40, NV41, NV43, NV44,
+NV45), GeForce 7xxx (G70).
 
 %description -l pl
-Sterownik do kart graficznych NVidia.
+Sterownik obrazu X.org dla kart graficznych NVIDIA. Obs³uguje karty
+PCI i AGP oparte na nastêpuj±cych uk³adach: RIVA 128 (NV3), RIVA TNT
+(NV4), GeForce 256, QUADRO (NV10), GeForce2, QUADRO2 (NV11, NV15),
+GeForce3, QUADRO DCC (NV20), nForce, nForce2 (NV1A, NV1F), GeForce4,
+QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO FX (NV30, NV31,
+NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40, NV41, NV43, NV44,
+NV45), GeForce 7xxx (G70).
 
 %prep
 %setup -q -n xf86-video-nv-%{version}
