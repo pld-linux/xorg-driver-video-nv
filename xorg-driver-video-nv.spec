@@ -1,20 +1,24 @@
 Summary:	X.org video driver for NVIDIA video adapters
 Summary(pl):	Sterownik obrazu X.org dla kart graficznych NVIDIA
 Name:		xorg-driver-video-nv
-Version:	1.0.1.1
+Version:	1.0.1.2
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/driver/xf86-video-nv-%{version}.tar.bz2
-# Source0-md5:	696d16ea4390be27cb2654377347dfb7
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-video-nv-%{version}.tar.bz2
+# Source0-md5:	84e2101a7ddff91a5ea96fa76b6cd6a3
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-proto-fontsproto-devel
+BuildRequires:	xorg-proto-randrproto-devel
+BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
+BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.1
-BuildRequires:	xorg-xserver-server-devel
+BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -63,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.NV1
+%doc ChangeLog README.NV1
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/nv_drv.so
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/riva128.so
 %{_mandir}/man4/nv.4x*
