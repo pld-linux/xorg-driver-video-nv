@@ -1,12 +1,12 @@
 Summary:	X.org video driver for NVIDIA video adapters
 Summary(pl):	Sterownik obrazu X.org dla kart graficznych NVIDIA
 Name:		xorg-driver-video-nv
-Version:	1.0.1.2
+Version:	1.0.1.3
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/driver/xf86-video-nv-%{version}.tar.bz2
-# Source0-md5:	84e2101a7ddff91a5ea96fa76b6cd6a3
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/driver/xf86-video-nv-%{version}.tar.bz2
+# Source0-md5:	834e765b7a41f8da18f19817b58694d0
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -17,7 +17,7 @@ BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-proto-renderproto-devel
 BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.1
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 0.99.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -57,8 +57,7 @@ NV45), GeForce 7xxx (G70).
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	drivermandir=%{_mandir}/man4
+	DESTDIR=$RPM_BUILD_ROOT
 
 rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
@@ -70,4 +69,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README.NV1
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/nv_drv.so
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/riva128.so
-%{_mandir}/man4/nv.4x*
+%{_mandir}/man4/nv.4*
