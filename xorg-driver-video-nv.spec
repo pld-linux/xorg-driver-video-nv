@@ -1,12 +1,12 @@
 Summary:	X.org video driver for NVIDIA video adapters
 Summary(pl):	Sterownik obrazu X.org dla kart graficznych NVIDIA
 Name:		xorg-driver-video-nv
-Version:	1.0.1.3
+Version:	1.0.1.4
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/driver/xf86-video-nv-%{version}.tar.bz2
-# Source0-md5:	834e765b7a41f8da18f19817b58694d0
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/driver/xf86-video-nv-%{version}.tar.bz2
+# Source0-md5:	117f93df1d5b37bd1461b1091f58d1e7
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
