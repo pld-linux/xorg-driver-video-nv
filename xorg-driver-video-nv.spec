@@ -20,25 +20,26 @@ BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
+Requires:	xorg-xserver-server >= 1.0.99.901
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 X.org video driver for NVIDIA video adapters. It supports PCI and AGP
 video cards based on the following chips: RIVA 128 (NV3), RIVA TNT
-(NV4), GeForce 256, QUADRO (NV10), GeForce2, QUADRO2 (NV11, NV15),
-GeForce3, QUADRO DCC (NV20), nForce, nForce2 (NV1A, NV1F), GeForce4,
-QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO FX (NV30, NV31,
-NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40, NV41, NV43, NV44,
-NV45, C51), GeForce 7xxx (G70, G71, G72, G73).
+(NV4), RIVA TNT2 (NV5), GeForce 256, QUADRO (NV10), GeForce2, QUADRO2
+(NV11, NV15), GeForce3, QUADRO DCC (NV20), nForce, nForce2 (NV1A,
+NV1F), GeForce4, QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO
+FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40,
+NV41, NV43, NV44, NV45, C51), GeForce 7xxx (G70, G71, G72, G73).
 
 %description -l pl
 Sterownik obrazu X.org dla kart graficznych NVIDIA. Obs³uguje karty
 PCI i AGP oparte na nastêpuj±cych uk³adach: RIVA 128 (NV3), RIVA TNT
-(NV4), GeForce 256, QUADRO (NV10), GeForce2, QUADRO2 (NV11, NV15),
-GeForce3, QUADRO DCC (NV20), nForce, nForce2 (NV1A, NV1F), GeForce4,
-QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO FX (NV30, NV31,
-NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40, NV41, NV43, NV44,
-NV45, C51), GeForce 7xxx (G70, G71, G72, G73).
+(NV4), RIVA TNT2 (NV5), GeForce 256, QUADRO (NV10), GeForce2, QUADRO2
+(NV11, NV15), GeForce3, QUADRO DCC (NV20), nForce, nForce2 (NV1A,
+NV1F), GeForce4, QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO
+FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40,
+NV41, NV43, NV44, NV45, C51), GeForce 7xxx (G70, G71, G72, G73).
 
 %prep
 %setup -q -n xf86-video-nv-%{version}
