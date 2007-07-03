@@ -33,7 +33,8 @@ video cards based on the following chips: RIVA 128 (NV3), RIVA TNT
 (NV11, NV15), GeForce3, QUADRO DCC (NV20), nForce, nForce2 (NV1A,
 NV1F), GeForce4, QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO
 FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40,
-NV41, NV43, NV44, NV45, C51), GeForce 7xxx (G70, G71, G72, G73).
+NV41, NV43, NV44, NV45, C51), GeForce 7xxx (G70, G71, G72, G73),
+GeForce 8xxx (G80, G84, G86).
 
 %description -l pl.UTF-8
 Sterownik obrazu X.org dla kart graficznych NVIDIA. Obsługuje karty
@@ -42,7 +43,8 @@ PCI i AGP oparte na następujących układach: RIVA 128 (NV3), RIVA TNT
 (NV11, NV15), GeForce3, QUADRO DCC (NV20), nForce, nForce2 (NV1A,
 NV1F), GeForce4, QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO
 FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40,
-NV41, NV43, NV44, NV45, C51), GeForce 7xxx (G70, G71, G72, G73).
+NV41, NV43, NV44, NV45, C51), GeForce 7xxx (G70, G71, G72, G73),
+GeForce 8xxx (G80, G84, G86).
 
 %prep
 %setup -q -n xf86-video-nv-%{version}
@@ -71,6 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README.NV1
+%doc COPYING ChangeLog README.NV1 README.G80
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/nv_drv.so
 %{_mandir}/man4/nv.4*
