@@ -20,6 +20,8 @@ BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.1.3
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
+BuildRequires:  rpmbuild(macros) >= 1.389
+%requires_xorg_xserver_videodrv
 Requires:	xorg-xserver-server >= 1.0.99.901
 Obsoletes:	X11-driver-nv < 1:7.0.0
 Obsoletes:	XFree86-NVidia
