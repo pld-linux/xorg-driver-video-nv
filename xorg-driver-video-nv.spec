@@ -1,17 +1,18 @@
 Summary:	X.org video driver for NVIDIA video adapters
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart graficznych NVIDIA
 Name:		xorg-driver-video-nv
-Version:	2.1.8
+Version:	2.1.9
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-video-nv-%{version}.tar.bz2
-# Source0-md5:	c3e8c98287dc98677bebfbe1ba51ab77
+# Source0-md5:	c6b7e52fa18455c22eb040b8d2575ce5
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libpciaccess-devel >= 0.8.0
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-proto-renderproto-devel
@@ -19,10 +20,10 @@ BuildRequires:	xorg-proto-videoproto-devel
 BuildRequires:	xorg-proto-xextproto-devel
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.1.3
-BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
+BuildRequires:	xorg-xserver-server-devel >= 1.2
 BuildRequires:  rpmbuild(macros) >= 1.389
 %requires_xorg_xserver_videodrv
-Requires:	xorg-xserver-server >= 1.0.99.901
+Requires:	xorg-xserver-server >= 1.2
 Obsoletes:	X11-driver-nv < 1:7.0.0
 Obsoletes:	XFree86-NVidia
 Obsoletes:	XFree86-driver-nv < 1:7.0.0
@@ -36,7 +37,7 @@ video cards based on the following chips: RIVA 128 (NV3), RIVA TNT
 NV1F), GeForce4, QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO
 FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40,
 NV41, NV43, NV44, NV45, C51), GeForce 7xxx (G70, G71, G72, G73),
-GeForce 8xxx (G80, G84, G86).
+GeForce 8xxx (G80, G84, G86, G92).
 
 %description -l pl.UTF-8
 Sterownik obrazu X.org dla kart graficznych NVIDIA. Obsługuje karty
@@ -46,7 +47,7 @@ PCI i AGP oparte na następujących układach: RIVA 128 (NV3), RIVA TNT
 NV1F), GeForce4, QUADRO4 (NV17, NV18, NV25, NV28), GeForce FX, QUADRO
 FX (NV30, NV31, NV34, NV35, NV36, NV37, NV38), GeForce 6xxx (NV40,
 NV41, NV43, NV44, NV45, C51), GeForce 7xxx (G70, G71, G72, G73),
-GeForce 8xxx (G80, G84, G86).
+GeForce 8xxx (G80, G84, G86, G92).
 
 %prep
 %setup -q -n xf86-video-nv-%{version}
