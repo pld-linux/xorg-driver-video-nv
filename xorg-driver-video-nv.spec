@@ -1,18 +1,19 @@
 Summary:	X.org video driver for NVIDIA video adapters
 Summary(pl.UTF-8):	Sterownik obrazu X.org dla kart graficznych NVIDIA
 Name:		xorg-driver-video-nv
-Version:	2.1.21
-Release:	3
+Version:	2.1.22
+Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-nv-%{version}.tar.bz2
-# Source0-md5:	1fdd41d88232043811cbe3f5ac724c5f
+Source0:	https://xorg.freedesktop.org/releases/individual/driver/xf86-video-nv-%{version}.tar.xz
+# Source0-md5:	4e07cf0b7e22f1f640aa4ac073f47c37
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libpciaccess-devel >= 0.10.7
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
@@ -22,12 +23,13 @@ BuildRequires:	xorg-proto-xextproto-devel >= 7.0.99.1
 BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xorg-xserver-server-devel >= 1.3
+BuildRequires:	xz
 %{?requires_xorg_xserver_videodrv}
 Requires:	xorg-lib-libpciaccess >= 0.10.7
 Requires:	xorg-xserver-server >= 1.3
 Provides:	xorg-driver-video
 Obsoletes:	X11-driver-nv < 1:7.0.0
-Obsoletes:	XFree86-NVidia
+Obsoletes:	XFree86-NVidia < 4
 Obsoletes:	XFree86-driver-nv < 1:7.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -99,6 +101,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README README.G80
+%doc COPYING ChangeLog README.G80 README.md
 %attr(755,root,root) %{_libdir}/xorg/modules/drivers/nv_drv.so
 %{_mandir}/man4/nv.4*
